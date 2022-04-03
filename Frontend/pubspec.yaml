@@ -18,6 +18,8 @@ dependencies:
   snippet_coder_utils: ^1.0.12
   api_cache_manager: ^1.0.2
   flutter_secure_storage: ^5.0.2
+  google_fonts: ^2.3.1
+  shared_preferences: ^2.0.13
 
 dev_dependencies:
   flutter_test:
@@ -33,19 +35,18 @@ flutter_icons:
   ios: true
 
 flutter_native_splash:
-  #color: "#303F9F"
-  color: "#9FA8DA"
-  image: assets/idea.png
+  background_image: assets/splash.png
   android: true
   ios: true
-  android_gravity: fill
+  android_gravity: center
+  ios_content_mode: center
+  fullscreen: true
 
 flutter:
 
   uses-material-design: true
 
   assets:     
-    - assets/brighter_you_logo.png
-    - assets/idea.png
+    - assets/
 
  
