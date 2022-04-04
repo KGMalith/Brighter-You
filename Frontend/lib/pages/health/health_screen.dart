@@ -1,24 +1,19 @@
 import 'package:flutter/material.dart';
-import '../widgets/main_drawer.dart';
+import '../../widgets/main_drawer.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HealthPage extends StatelessWidget {
+  const HealthPage({Key? key}) : super(key: key);
 
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('Health Page'),
       ),
       drawer: const MainDrawer(),
       body: const Center(
         child: Text(
-          "Home",
+          "Your Health",
           style: TextStyle(fontWeight: FontWeight.w900, fontSize: 28),
         ),
       ),
