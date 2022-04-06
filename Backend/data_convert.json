@@ -1,0 +1,170 @@
+[
+  {
+    "age_range": 13,
+    "job_status": 1,
+    "questions": [
+      "Assignment Submissions Deadlines",
+      "Having Low Scores to Subjects",
+      "Mental Stress Due To Exams"
+    ]
+  },
+  {
+    "age_range": 20,
+    "job_status": 1,
+    "questions": [
+      "Assignment Submissions Deadlines",
+      "Having Low Scores to Subjects",
+      "Low O/L,A/L Results Depression",
+      "Lack Of Hire Education Opportunities"
+    ]
+  },
+  {
+    "age_range": 20,
+    "job_status": 2,
+    "questions": ["Workplace Problems", "Business Problems"]
+  },
+  {
+    "age_range": 20,
+    "job_status": 3,
+    "questions": [
+      "Unemployed Looking For Jobs",
+      "Business Problems",
+      "Preparing To Start An Own Business",
+      "Unemployed And Uneducated With No Plan"
+    ]
+  },
+  {
+    "age_range": 30,
+    "job_status": 1,
+    "questions": [
+      "Assignment Submissions Deadlines",
+      "Having Low Scores to Subjects",
+      "Lack Of Hire Education Opportunities",
+      "Problems About Higher Studies",
+      "Problems About Paying Tution Fees For Higher Studies",
+      "Finding Job Internship"
+    ]
+  },
+  {
+    "age_range": 30,
+    "job_status": 2,
+    "questions": [
+      "Finding Job Internship",
+      "Searching Job Vaccancies For DreamJob",
+      "How To Find Opportunity To The DreamJob",
+      "Lack Of Salary",
+      "Lack Of Increment",
+      "Workplace Problems",
+      "Thinking About Shifting Job Place/Job Position",
+      "Issues Related To Immigration"
+    ]
+  },
+  {
+    "age_range": 30,
+    "job_status": 3,
+    "questions": [
+      "Unemployed Looking For Jobs",
+      "Business Problems",
+      "Preparing To Start An Own Business",
+      "Unemployed And Uneducated With No Plan"
+    ]
+  },
+  {
+    "age_range": 40,
+    "job_status": 1,
+    "questions": [
+      "Assignment Submissions Deadlines",
+      "Having Low Scores to Subjects",
+      "Lack Of Hire Education Opportunities",
+      "Problems About Higher Studies",
+      "Problems About Paying Tution Fees For Higher Studies",
+      "Finding Job Internship",
+      "Thnking To Start A Startup Company"
+    ]
+  },
+  {
+    "age_range": 40,
+    "job_status": 2,
+    "questions": [
+      "Searching Job Vaccancies For DreamJob",
+      "Lack Of Salary",
+      "Lack Of Increment",
+      "Workplace Problems",
+      "Getting Promotion In Current Job",
+      "Issues Related To Immigration",
+      "Thnking To Start A Startup Company"
+    ]
+  },
+  {
+    "age_range": 40,
+    "job_status": 3,
+    "questions": [
+      "Unemployed Looking For Jobs",
+      "Business Problems",
+      "Preparing To Start An Own Business",
+      "Unemployed And Uneducated With No Plan"
+    ]
+  },
+  {
+    "age_range": 50,
+    "questions": [
+      "Lack Of Salary",
+      "Lack Of Increment",
+      "Workplace Problems",
+      "Change Workplace Problems",
+      "Getting Promotion In Current Job",
+      "Business Problems"
+    ]
+  },
+  {
+    "age_range": 60,
+    "questions": [
+      "Getting Retired",
+      "Making Retirement Plans",
+      "Health Problems",
+      "Business Problems"
+    ]
+  },
+  //civil status
+  {
+    "civil_status": 2,
+    "questions": [
+      "Matters In The Relationship",
+      "Partner's Problems",
+      "Family Problems Of The Both Sides",
+      "Thinking About Marriage And How To Propose"
+    ]
+  },
+  {
+    "civil_status": 3,
+    "questions": [
+      "Matters In The Relationship",
+      "Partner's Problems",
+      "Family Problems Of The Both Sides",
+      "Thinking About Marriage And How To Propose",
+      "Expecting a child",
+      "Child's School Matters",
+      "Child's Health Issues"
+    ]
+  },
+  //dependants status
+  {
+    "is_dependants_available": true,
+    "questions": [
+      "Survival Problems",
+      "Market Price For Essential Goods",
+      "Bill Payments",
+      "Increment Of Utility Cost"
+    ]
+  },
+
+  //food type
+  {
+    "food_type": 2,
+    "questions": ["Health Problems", "Over Weight Problems"]
+  },
+  {
+    "food_type": 3,
+    "questions": ["Lower Nutrition", "Weight Loss Problems","Cost Of buying Additional Vitamins, Proteins"]
+  }
+]

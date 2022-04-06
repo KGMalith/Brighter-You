@@ -63,7 +63,9 @@ module.exports = {
     const token = await sails.helpers.jwtTokenIssue(tokenBody);
 
     const data = {
-      token: token
+      token: token,
+      user_name: user.name,
+      user_email: user.email
     };
 
 
