@@ -29,26 +29,30 @@ module.exports.routes = {
   // answers routes
   'POST /api/questions/get-answers': { action: 'questions/get-answers' },
   'POST /api/questions/delete-saved-answers': { action: 'questions/delete-saved-answers' },
+  'POST /api/questions/save-answers': { action: 'questions/save-answers' },
   'GET /api/questions/get-all-saved-answers': { action: 'questions/get-all-saved-answers' },
-  'GET /api/questions/get-saved-answers': { action: 'questions/get-saved-answers' },
+  'POST /api/questions/get-saved-answers': { action: 'questions/get-saved-answers' },
 
   //vehicle routes
   'POST /api/vehicle/get-answers': { action: 'vehicle/get-answers' },
   'POST /api/vehicle/delete-saved-answers': { action: 'vehicle/delete-saved-answers' },
+  'POST /api/vehicle/save-answers': { action: 'vehicle/save-answers' },
   'GET /api/vehicle/get-all-saved-answers': { action: 'vehicle/get-all-saved-answers' },
-  'GET /api/vehicle/get-saved-answers': { action: 'vehicle/get-saved-answers' },
+  'POST /api/vehicle/get-saved-answers': { action: 'vehicle/get-saved-answers' },
 
   //health routes
   'POST /api/health/get-answers': { action: 'health/get-answers' },
   'POST /api/health/delete-saved-answers': { action: 'health/delete-saved-answers' },
+  'POST /api/health/save-answers': { action: 'health/save-answers' },
   'GET /api/health/get-all-saved-answers': { action: 'health/get-all-saved-answers' },
-  'GET /api/health/get-saved-answers': { action: 'health/get-saved-answers' },
+  'POST /api/health/get-saved-answers': { action: 'health/get-saved-answers' },
 
   //career routes
   'POST /api/career/get-answers': { action: 'career/get-answers' },
   'POST /api/career/delete-saved-answers': { action: 'career/delete-saved-answers' },
+  'POST /api/career/save-answers': { action: 'career/save-answers' },
   'GET /api/career/get-all-saved-answers': { action: 'career/get-all-saved-answers' },
-  'GET /api/career/get-saved-answers': { action: 'career/get-saved-answers' },
+  'POST /api/career/get-saved-answers': { action: 'career/get-saved-answers' },
 
   /***************************************************************************
   *                                                                          *
