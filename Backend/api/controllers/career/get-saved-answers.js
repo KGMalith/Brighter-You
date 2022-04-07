@@ -92,7 +92,7 @@ module.exports = {
       civilStatus: civilStatus,
       jobType: jobType,
       jobStatus: jobStatus,
-      answers_list: answer.questions
+      answers_list: answer.careers
     });
 
   }

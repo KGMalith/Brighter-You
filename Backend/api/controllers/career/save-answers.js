@@ -74,78 +74,78 @@ module.exports = {
       }
     }
 
-    var age_job_questions_list = await QuestionsPredefinedAnswers.findOne({ category: 'AGE_AND_JOB' });
-    var civilStatus_question_list = await QuestionsPredefinedAnswers.findOne({ category: 'CIVILStatus' });
-    var food_type_question_list = await QuestionsPredefinedAnswers.findOne({ category: 'FOOD_TYPE' });
-    var dependant_question_list = await QuestionsPredefinedAnswers.findOne({ category: 'DEPENDANT' });
+    var age_job_careers_list = await careersPredefinedAnswers.findOne({ category: 'AGE_AND_JOB' });
+    var civilStatus_career_list = await careersPredefinedAnswers.findOne({ category: 'CIVILStatus' });
+    var jobType_career_list = await careersPredefinedAnswers.findOne({ category: 'JOB_TYPE' });
+    var dependant_career_list = await careersPredefinedAnswers.findOne({ category: 'DEPENDANT' });
 
-    age_job_questions_list.answers = JSON.parse(age_job_questions_list.answers);
-    civilStatus_question_list.answers = JSON.parse(civilStatus_question_list.answers);
-    food_type_question_list.answers = JSON.parse(food_type_question_list.answers);
-    dependant_question_list.answers = JSON.parse(dependant_question_list.answers);
+    age_job_careers_list.answers = JSON.parse(age_job_careers_list.answers);
+    civilStatus_career_list.answers = JSON.parse(civilStatus_career_list.answers);
+    jobType_career_list.answers = JSON.parse(jobType_career_list.answers);
+    dependant_career_list.answers = JSON.parse(dependant_career_list.answers);
 
 
-    let question_list = [];
+    let career_list = [];
     //each senario
     if (age <= 13 && inputs.jobStatus == 1) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 13);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 13);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 13 && age <= 20 && inputs.jobStatus == 1) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 20 && x.jobStatus == 1);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 20 && x.jobStatus == 1);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 13 && age <= 20 && inputs.jobStatus == 2) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 20 && x.jobStatus == 2);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 20 && x.jobStatus == 2);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 13 && age <= 20 && inputs.jobStatus == 3) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 20 && x.jobStatus == 3);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 20 && x.jobStatus == 3);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 20 && age <= 30 && inputs.jobStatus == 1) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 30 && x.jobStatus == 1);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 30 && x.jobStatus == 1);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 20 && age <= 30 && inputs.jobStatus == 2) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 30 && x.jobStatus == 2);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 30 && x.jobStatus == 2);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 20 && age <= 30 && inputs.jobStatus == 3) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 30 && x.jobStatus == 3);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 30 && x.jobStatus == 3);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 30 && age <= 40 && inputs.jobStatus == 1) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 40 && x.jobStatus == 1);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 40 && x.jobStatus == 1);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 30 && age <= 40 && inputs.jobStatus == 2) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 40 && x.jobStatus == 2);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 40 && x.jobStatus == 2);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 30 && age <= 40 && inputs.jobStatus == 3) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 40 && x.jobStatus == 3);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 40 && x.jobStatus == 3);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else if (age > 40 && age <= 50) {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 50);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 50);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     } else {
-      let answerObj = age_job_questions_list.answers.find(x => x.age_range == 60);
+      let answerObj = age_job_careers_list.answers.find(x => x.age_range == 60);
       if (answerObj) {
-        question_list = question_list.concat(answerObj.questions);
+        career_list = career_list.concat(answerObj.careers);
       }
     }
 
@@ -153,15 +153,15 @@ module.exports = {
     //check civil status
     switch (inputs.civilStatus) {
       case 2:
-        let resultObj1 = civilStatus_question_list.answers.find(x => x.civilStatus == inputs.civilStatus);
+        let resultObj1 = civilStatus_career_list.answers.find(x => x.civilStatus == inputs.civilStatus);
         if (resultObj1) {
-          question_list = question_list.concat(resultObj1.questions);
+          career_list = career_list.concat(resultObj1.careers);
         }
         break;
       case 3:
-        let resultObj2 = civilStatus_question_list.answers.find(x => x.civilStatus == inputs.civilStatus);
+        let resultObj2 = civilStatus_career_list.answers.find(x => x.civilStatus == inputs.civilStatus);
         if (resultObj2) {
-          question_list = question_list.concat(resultObj2.questions);
+          career_list = career_list.concat(resultObj2.careers);
         }
         break;
       default:
@@ -171,15 +171,15 @@ module.exports = {
     //check foodtype
     switch (inputs.jobType) {
       case 2:
-        let resultObj1 = food_type_question_list.answers.find(x => x.jobType == inputs.jobType);
+        let resultObj1 = jobType_career_list.answers.find(x => x.jobType == inputs.jobType);
         if (resultObj1) {
-          question_list = question_list.concat(resultObj1.questions);
+          career_list = career_list.concat(resultObj1.careers);
         }
         break;
       case 3:
-        let resultObj2 = food_type_question_list.answers.find(x => x.jobType == inputs.jobType);
+        let resultObj2 = jobType_career_list.answers.find(x => x.jobType == inputs.jobType);
         if (resultObj2) {
-          question_list = question_list.concat(resultObj2.questions);
+          career_list = career_list.concat(resultObj2.careers);
         }
         break;
       default:
@@ -188,9 +188,9 @@ module.exports = {
 
     //check dependant available
     if (inputs.number_of_dependants > 0) {
-      let resultObj = dependant_question_list.answers.find(x => x.is_dependants_available == true);
+      let resultObj = dependant_career_list.answers.find(x => x.is_dependants_available == true);
       if (resultObj) {
-        question_list = question_list.concat(resultObj.questions);
+        career_list = career_list.concat(resultObj.careers);
       }
     }
 
@@ -200,7 +200,7 @@ module.exports = {
       jobType: inputs.jobType,
       jobStatus: inputs.jobStatus,
       number_of_dependants: inputs.number_of_dependants,
-      questions: question_list
+      careers: career_list
     };
 
     //save answer
