@@ -3,6 +3,7 @@ import 'package:brighter_you/pages/home_screen.dart';
 import 'package:brighter_you/services/auth_api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'signup_screen.dart';
 import 'dart:convert';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -131,8 +132,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         email: emailController.text.toString(),
                         password: passwordController.text.toString());
                     APIService.login(loginModel).then((response) async {
+                      //map respond
                       Map<String, dynamic> respond =
                           jsonDecode(response.toString());
+
                       if (respond['status']) {
                         setState(() {
                           isAPIcallProcess = false;
@@ -140,6 +143,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         await _storage.write(
                             key: "Bearer_Token",
                             value: jsonEncode(respond['token']));
+                        SharedPreferences pref =
+                            await SharedPreferences.getInstance();
+                        await pref.setString('user_name', respond['user_name']);
+                        await pref.setString(
+                            'user_email', respond['user_email']);
                         Navigator.push(
                             context,
                             MaterialPageRoute(

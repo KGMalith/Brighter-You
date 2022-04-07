@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../widgets/main_drawer.dart';
 
-class FutureQuestionPredictions extends StatelessWidget {
+class FutureQuestionPredictions extends StatefulWidget {
   const FutureQuestionPredictions({Key? key}) : super(key: key);
 
+  @override
+  _FutureQuestionPredictionsState createState() =>
+      _FutureQuestionPredictionsState();
+}
+
+class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

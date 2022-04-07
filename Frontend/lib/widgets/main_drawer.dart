@@ -5,9 +5,30 @@ import 'package:brighter_you/pages/profile/user_profile.dart';
 import 'package:brighter_you/pages/questions/future_question_predictions.dart';
 import 'package:brighter_you/pages/vehicle/future_vehicle_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class MainDrawer extends StatelessWidget {
+class MainDrawer extends StatefulWidget {
   const MainDrawer({Key? key}) : super(key: key);
+
+  @override
+  _MainDrawerState createState() => _MainDrawerState();
+}
+
+class _MainDrawerState extends State<MainDrawer> {
+  String username = "";
+  String useremail = "";
+
+  @override
+  void initState() {
+    getName();
+  }
+
+  void getName() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    username = prefs.getString("user_name")!;
+    useremail = prefs.getString("user_email")!;
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +41,17 @@ class MainDrawer extends StatelessWidget {
             color: Theme.of(context).primaryColor,
             child: Center(
               child: Column(
-                children: const <Widget>[
+                children: <Widget>[
                   Text(
-                    'User Name',
-                    style: TextStyle(
+                    username,
+                    style: const TextStyle(
                       fontSize: 22,
                       color: Colors.white,
                     ),
                   ),
                   Text(
-                    'User email',
-                    style: TextStyle(
+                    useremail,
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Colors.white,
                     ),
