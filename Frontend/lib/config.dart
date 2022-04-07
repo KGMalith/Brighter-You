@@ -9,6 +9,12 @@ class Config {
   static const String signupUrl = '/api/auth/signup';
 
   //question urls
+  static const String getAnswers = '/api/questions/get-answers';
+  static const String deleteAnswers = '/api/questions/delete-saved-answers';
+  static const String saveAnswers = '/api/questions/save-answers';
+  static const String getAllSavedAnswers =
+      '/api/questions/get-all-saved-answers';
+  static const String getSavedAnswer = '/api/questions/get-saved-answers';
 
   //vehicle urls
 

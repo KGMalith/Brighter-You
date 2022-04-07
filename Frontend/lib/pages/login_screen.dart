@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
             //Logo
             Container(
               margin: const EdgeInsets.only(top: 100),
-              child: Image.asset("assets/idea.png"),
+              child: Image.asset("assets/splash_rounded.png"),
               height: 100,
               width: 100,
             ),
@@ -140,11 +140,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         setState(() {
                           isAPIcallProcess = false;
                         });
-                        await _storage.write(
-                            key: "Bearer_Token",
-                            value: jsonEncode(respond['token']));
                         SharedPreferences pref =
                             await SharedPreferences.getInstance();
+                        await pref.setString('Bearer_Token', respond['token']);
                         await pref.setString('user_name', respond['user_name']);
                         await pref.setString(
                             'user_email', respond['user_email']);
