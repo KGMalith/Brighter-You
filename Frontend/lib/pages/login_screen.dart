@@ -1,5 +1,6 @@
 import 'package:brighter_you/models/login_request_model.dart';
 import 'package:brighter_you/pages/home_screen.dart';
+import 'package:brighter_you/pages/questions/future_question_predictions.dart';
 import 'package:brighter_you/services/auth_api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -149,7 +150,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                                builder: (context) =>
+                                    FutureQuestionPredictions()));
                       } else {
                         setState(() {
                           isAPIcallProcess = false;
