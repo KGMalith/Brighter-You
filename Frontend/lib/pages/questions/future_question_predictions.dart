@@ -147,7 +147,7 @@ class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
                             },
                           ),
                           SizedBox(
-                            height: sizeH * 2,
+                            height: sizeH * 1.5,
                           ),
                           TextFormField(
                             controller: dependantsController,
@@ -164,7 +164,7 @@ class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
                             },
                           ),
                           SizedBox(
-                            height: sizeH * 2,
+                            height: sizeH * 1.5,
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -205,7 +205,7 @@ class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
                             ),
                           ),
                           SizedBox(
-                            height: sizeH * 2,
+                            height: sizeH * 1.5,
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -246,7 +246,7 @@ class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
                             ),
                           ),
                           SizedBox(
-                            height: sizeH * 2,
+                            height: sizeH * 1.5,
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -287,7 +287,7 @@ class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
                             ),
                           ),
                           SizedBox(
-                            height: sizeH * 2,
+                            height: sizeH * 1.5,
                           ),
                           ElevatedButton(
                             child: Text('Generate Question',
@@ -372,7 +372,15 @@ class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
                                 });
                               }
                             },
-                          )
+                          ),
+                          Container(
+                            height: sizeH * 25,
+                            width: sizeV * 55,
+                            child: Image.asset(
+                              'assets/question_page.png',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
                         ],
                       )),
                 ))
