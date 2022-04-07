@@ -62,17 +62,13 @@ module.exports = {
     //tokens
     const token = await sails.helpers.jwtTokenIssue(tokenBody);
 
-    const data = {
-      token: token,
-      user_name: user.name,
-      user_email: user.email
-    };
-
 
     // All done.
     return exits.success({
       status:true,
-      data: data,
+      token: token,
+      user_name: user.name,
+      user_email: user.email,
       msg: 'Signin successful'
     });
 

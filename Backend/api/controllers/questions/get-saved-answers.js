@@ -84,18 +84,16 @@ module.exports = {
         break;
     }
 
-    //save answer object
-    let returnObj = {
+    // All done.
+    return exits.success({ 
+      status: true, 
       save_name: answerObj.save_name,
       age: answer.age,
       civil_status: civil_status,
       food_type: food_type,
       job_status: job_status,
       answers_list: answer.questions
-    }
-
-    // All done.
-    return exits.success({ status: true, data: returnObj });
+    });
 
   }
 
