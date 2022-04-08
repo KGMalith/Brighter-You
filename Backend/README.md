@@ -1,5 +1,13 @@
 # backend
 
+
+#Please Install Sails JS to run backend. to install sails js visit
+### Links
+https://sailsjs.com/get-started
+
+
+#please install mysql database to localhost port 3306.
+
 a [Sails v1](https://sailsjs.com) application
 
 
