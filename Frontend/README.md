@@ -1,5 +1,8 @@
 # brighter_you
 
+### NOTE
+#if tou are running in flutter UI in web browser mode please change api base URL to "127.0.0.1:1337", If you are running on emulator mobile device please change to "10.0.2.2". Path is Frontend/lib/config.dart
+
 A new Flutter project.
 
 ## Getting Started
