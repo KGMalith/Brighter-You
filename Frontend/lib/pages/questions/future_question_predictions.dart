@@ -120,7 +120,7 @@ class _FutureQuestionPredictionsState extends State<FutureQuestionPredictions> {
       ),
       drawer: const MainDrawer(),
       body: displayView == 1
-          ? Container(
+          ? SingleChildScrollView(
               child: Column(children: [
                 SizedBox(
                   height: sizeH * 8,
