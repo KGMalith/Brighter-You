@@ -1,6 +1,7 @@
 import 'package:brighter_you/pages/career/future_career_screen.dart';
 import 'package:brighter_you/pages/health/health_screen.dart';
 import 'package:brighter_you/pages/home_screen.dart';
+import 'package:brighter_you/pages/login_screen.dart';
 import 'package:brighter_you/pages/profile/user_profile.dart';
 import 'package:brighter_you/pages/questions/future_question_predictions.dart';
 import 'package:brighter_you/pages/vehicle/future_vehicle_screen.dart';
@@ -60,36 +61,36 @@ class _MainDrawerState extends State<MainDrawer> {
               ),
             ),
           ),
-          GestureDetector(
-            child: const ListTile(
-              leading: Icon(Icons.person),
-              title: Text(
-                'Profile',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            onTap: () => {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const UserProfile()))
-            },
-          ),
-          GestureDetector(
-            child: const ListTile(
-              leading: Icon(Icons.home),
-              title: Text(
-                'Home',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            onTap: () => {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()))
-            },
-          ),
+          // GestureDetector(
+          //   child: const ListTile(
+          //     leading: Icon(Icons.person),
+          //     title: Text(
+          //       'Profile',
+          //       style: TextStyle(
+          //         fontSize: 18,
+          //       ),
+          //     ),
+          //   ),
+          //   onTap: () => {
+          //     Navigator.push(context,
+          //         MaterialPageRoute(builder: (context) => const UserProfile()))
+          //   },
+          // ),
+          // GestureDetector(
+          //   child: const ListTile(
+          //     leading: Icon(Icons.home),
+          //     title: Text(
+          //       'Home',
+          //       style: TextStyle(
+          //         fontSize: 18,
+          //       ),
+          //     ),
+          //   ),
+          //   onTap: () => {
+          //     Navigator.push(context,
+          //         MaterialPageRoute(builder: (context) => const HomeScreen()))
+          //   },
+          // ),
           GestureDetector(
             child: const ListTile(
               leading: Icon(Icons.emoji_events_rounded),
@@ -121,7 +122,7 @@ class _MainDrawerState extends State<MainDrawer> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const FutureVehiclePage()))
+                      builder: (context) => const FutureVehiclePredictions()))
             },
           ),
           GestureDetector(
@@ -136,7 +137,7 @@ class _MainDrawerState extends State<MainDrawer> {
             ),
             onTap: () => {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HealthPage()))
+                  MaterialPageRoute(builder: (context) => const HealthScreen()))
             },
           ),
           GestureDetector(
@@ -156,15 +157,20 @@ class _MainDrawerState extends State<MainDrawer> {
                       builder: (context) => const FutureCareerPage()))
             },
           ),
-          const ListTile(
-            leading: Icon(Icons.arrow_back),
-            title: Text(
-              'Logout',
-              style: TextStyle(
-                fontSize: 18,
+          GestureDetector(
+            child: const ListTile(
+              leading: Icon(Icons.arrow_back),
+              title: Text(
+                'Logout',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
               ),
             ),
-            onTap: null,
+            onTap: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()))
+            },
           ),
         ],
       ),
