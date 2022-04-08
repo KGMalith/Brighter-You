@@ -17,6 +17,12 @@ class Config {
   static const String getSavedAnswer = '/api/questions/get-saved-answers';
 
   //vehicle urls
+  static const String getVehicles = '/api/vehicle/get-answers';
+  static const String deleteVehicles = '/api/vehicle/delete-saved-answers';
+  static const String saveVehicles = '/api/vehicle/save-answers';
+  static const String getAllSavedVehicles =
+      '/api/vehicle/get-all-saved-answers';
+  static const String getSavedVehicles = '/api/vehicle/get-saved-answers';
 
   //health urls
 
