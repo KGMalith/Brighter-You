@@ -62,36 +62,6 @@ class _MainDrawerState extends State<MainDrawer> {
           ),
           GestureDetector(
             child: const ListTile(
-              leading: Icon(Icons.person),
-              title: Text(
-                'Profile',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            onTap: () => {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const UserProfile()))
-            },
-          ),
-          GestureDetector(
-            child: const ListTile(
-              leading: Icon(Icons.home),
-              title: Text(
-                'Home',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            onTap: () => {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()))
-            },
-          ),
-          GestureDetector(
-            child: const ListTile(
               leading: Icon(Icons.emoji_events_rounded),
               title: Text(
                 'Your Future',
@@ -136,7 +106,7 @@ class _MainDrawerState extends State<MainDrawer> {
             ),
             onTap: () => {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HealthPage()))
+                  MaterialPageRoute(builder: (context) => const HealthScreen()))
             },
           ),
           GestureDetector(
