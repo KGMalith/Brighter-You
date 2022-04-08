@@ -121,7 +121,7 @@ class _MainDrawerState extends State<MainDrawer> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const FutureVehiclePage()))
+                      builder: (context) => const FutureVehiclePredictions()))
             },
           ),
           GestureDetector(
