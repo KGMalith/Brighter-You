@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/main_drawer.dart';
 import 'package:brighter_you/models/career_request_model.dart';
-import 'package:brighter_you/pages/home_screen.dart';
+import 'package:brighter_you/pages/career/career_result_screen.dart';
 import 'package:brighter_you/services/auth_api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -21,7 +21,6 @@ class FutureCareerPage extends StatefulWidget {
       appBar: AppBar(
         title: const Text('Future Career Page'),
       ),
-      drawer: const MainDrawer(),
       body: const Center(
         child: Text(
           "Future Career",
@@ -121,7 +120,6 @@ class _FutureCareerState extends State<FutureCareerPage> {
               alignment: Alignment.center,
               child: TextField(
                 controller: civilStatusController,
-                obscureText: true,
                 cursorColor: const Color(0xff01122b),
                 decoration: const InputDecoration(
                     icon: Icon(
@@ -150,7 +148,6 @@ class _FutureCareerState extends State<FutureCareerPage> {
               alignment: Alignment.center,
               child: TextField(
                 controller: jobStatusController,
-                obscureText: true,
                 cursorColor: const Color(0xff01122b),
                 decoration: const InputDecoration(
                     icon: Icon(
@@ -179,7 +176,6 @@ class _FutureCareerState extends State<FutureCareerPage> {
               alignment: Alignment.center,
               child: TextField(
                 controller: jobTitleController,
-                obscureText: true,
                 cursorColor: const Color(0xff01122b),
                 decoration: const InputDecoration(
                     icon: Icon(
@@ -208,7 +204,6 @@ class _FutureCareerState extends State<FutureCareerPage> {
               alignment: Alignment.center,
               child: TextField(
                 controller: dependantController,
-                obscureText: true,
                 cursorColor: const Color(0xff01122b),
                 decoration: const InputDecoration(
                     icon: Icon(
@@ -241,31 +236,31 @@ class _FutureCareerState extends State<FutureCareerPage> {
                       jobTitle: jobTitleController.text.toString(),
                       dependants: dependantController.text.toString());
 
-                  // APIService.career(careerModel).then((response) async {
-                  //   Map<String, dynamic> respond =
-                  //       jsonDecode(response.toString());
-                  //   if (respond['status']) {
-                  //     setState(() {
-                  //       isAPIcallProcess = false;
-                  //     });
-                  //     Fluttertoast.showToast(
-                  //         msg: respond['msg'],
-                  //         backgroundColor: Colors.green,
-                  //         textColor: Colors.white);
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => HomeScreen())); //Change this into the function in directed page
-                  //   } else {
-                  //     setState(() {
-                  //       isAPIcallProcess = false;
-                  //     });
-                  //     Fluttertoast.showToast(
-                  //         msg: respond['err'],
-                  //         backgroundColor: Colors.redAccent,
-                  //         textColor: Colors.white);
-                  //   }
-                  // });
+                  APIService.career(careerModel).then((response) async {
+                    Map<String, dynamic> respond =
+                        jsonDecode(response.toString());
+                    if (respond['status']) {
+                      setState(() {
+                        isAPIcallProcess = false;
+                      });
+                      Fluttertoast.showToast(
+                          msg: respond['msg'],
+                          backgroundColor: Colors.green,
+                          textColor: Colors.white);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CareerResultScreen())); //Change this into the function in directed page
+                    } else {
+                      setState(() {
+                        isAPIcallProcess = false;
+                      });
+                      Fluttertoast.showToast(
+                          msg: respond['err'],
+                          backgroundColor: Colors.redAccent,
+                          textColor: Colors.white);
+                    }
+                  });
                 }
               },
               child: Container(
@@ -303,10 +298,10 @@ class _FutureCareerState extends State<FutureCareerPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => HomeScreen()))//Change this into the function in directed page
+                              builder: (context) => CareerResultScreen()))//Change this into the function in directed page
                     },
                     child: const Text(
-                      "Back to home",
+                      "See previous results",
                       style: TextStyle(color: Color(0xff2b4366)),
                     ),
                   )
