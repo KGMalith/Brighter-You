@@ -27,6 +27,7 @@ class Config {
   //health urls
 
   //career urls
+  static const String saveCareer = '/api/career/save-answers';
 }
 
 class SizeConfig {
