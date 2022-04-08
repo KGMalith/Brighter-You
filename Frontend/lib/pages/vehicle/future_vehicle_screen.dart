@@ -339,7 +339,15 @@ class _FutureVehiclePredictionsState extends State<FutureVehiclePredictions> {
                                 });
                               }
                             },
-                          )
+                          ),
+                           Container(
+                            height: sizeH * 25,
+                            width: sizeV * 55,
+                            child: Image.asset(
+                              'assets/range.jpg',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
                         ],
                       )),
                 ))
